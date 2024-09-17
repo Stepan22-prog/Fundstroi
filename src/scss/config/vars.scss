@@ -8,19 +8,17 @@ $containerWidth: 1440px;
 
 $mainOffset: 10px; // container safety paddings
 $mainOffsetMobileB: 15px;
-$mainFont: 'Inter';
+$mainFont: 'Roboto';
 $mainWeight: 400;
 
+$primaryColor: #0D0D0D;
+$secondaryColor: #F2F2F2;
+$accentColor: #F2CB05;
+$addBackground: #E8E8E8;
 $whiteColor: #fff;
-$blackColor: #000;
-$yellowColor: #FF9000;
-$blueColor: #2C5E98;
-$greenColor: #76BB9D;
-$greyColor: #8D949B;
-$redColor: #BC4749;
 
 $fontFamily: $mainFont, sans-serif;
-$fontColor: $blackColor;
+$fontColor: $primaryColor;
 $fontSize: 16;
 $fontWeight: $mainWeight;
 

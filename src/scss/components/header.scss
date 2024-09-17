@@ -1,0 +1,25 @@
+.header__top {
+  display: flex;
+  padding: 10px 0;
+}
+
+.header-logo {
+  flex: auto;
+  font-weight: 700;
+  font-size: 28px;
+}
+
+.header-contacts {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 2px;
+}
+
+a.header-contacts__item {
+  font-weight: 500;
+}
+
+.header-callback-button {
+  font-weight: 500;
+  margin-left: 20px;
+}

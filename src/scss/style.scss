@@ -16,11 +16,6 @@
 @import 'libs/swiper';
 
 /**
-* nouislider styles
-*/
-@import 'config/nouislider.scss';
-
-/**
 * Common blocks
 */
 @import 'config/common';
@@ -28,18 +23,5 @@
 /**
 * Styles of blocks and sections
 */
+
 @import 'components/header';
-@import 'components/popup';
-@import 'components/cart-popup';
-@import 'components/categories';
-@import 'components/new';
-@import 'components/product-card';
-@import 'components/callback';
-@import 'components/catalog';
-@import 'components/filter';
-@import 'components/pagging';
-@import 'components/contacts';
-@import 'components/product';
-@import 'components/gallery-popup';
-@import 'components/reviews';
-@import 'components/footer';
