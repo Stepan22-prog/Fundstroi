@@ -1,0 +1,35 @@
+//adaptive
+$mobileS: 360px;
+$mobileB: 425px;
+$tablet: 768px;
+$laptop: 1024px;
+
+$containerWidth: 1440px;
+
+$mainOffset: 10px; // container safety paddings
+$mainOffsetMobileB: 15px;
+$mainFont: 'Inter';
+$mainWeight: 400;
+
+$whiteColor: #fff;
+$blackColor: #000;
+$yellowColor: #FF9000;
+$blueColor: #2C5E98;
+$greenColor: #76BB9D;
+$greyColor: #8D949B;
+$redColor: #BC4749;
+
+$fontFamily: $mainFont, sans-serif;
+$fontColor: $blackColor;
+$fontSize: 16;
+$fontWeight: $mainWeight;
+
+$standardTrans: all 0.4s ease 0ms;
+
+$btnBoxShadow: 0px 2px 3px rgba(#000, 10%), 0px 8px 3px rgba(#000, 10%);
+
+$lightBoxShadow: 0 0 2px 0 rgba(#000, 10%), 0 0 4px 0 rgba(#000, 10%),
+  0 0 8px 0 rgba(#000, 10%);
+
+$hoverBoxShadow: 0 0 5px 0 rgba(#000, 10%), 0 0 10px 0 rgba(#000, 10%),
+  0 0 15px 0 rgba(#000, 10%);
