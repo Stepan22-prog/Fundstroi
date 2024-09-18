@@ -1,0 +1,66 @@
+.catalog {
+  margin: 20px 0;
+}
+
+.tabs-nav {
+  display: flex;
+  justify-content: space-between;
+  gap: 15px;
+  background: $addBackground;
+  padding: 8px;
+  width: 40%;
+  margin: 15px auto;
+  border-radius: 5px;
+
+  &__item {
+    font-size: inherit;
+    padding: 8px 16px;
+    border-radius: 5px;
+    background: none;
+    transition: $standardTrans;
+
+    &._tab-active {
+      background: $accentColor;
+      transition: $standardTrans;
+    }
+  }
+}
+
+.tabs-body__item {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 20px;
+  &[hidden] {
+    display: none;
+  }
+}
+
+.product-card {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background: $whiteColor;
+  border: 1px solid $primaryColor;
+  border-radius: 5px;
+  padding: 15px;
+
+  &__img {
+    max-width: 250px;
+    max-height: 200px;
+    width: 100%;
+    height: 100%;
+  }
+
+  &__title {
+    font-size: 20px;
+    margin: 10px 0;
+    text-align: center;
+  }
+
+  &__button {
+    font-weight: 500;
+    border-radius: 5px;
+    font-size: 18px;
+    padding: 10 20px;
+  }
+}
