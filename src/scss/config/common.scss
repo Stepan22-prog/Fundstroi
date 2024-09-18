@@ -19,4 +19,11 @@ img {
   background: $accentColor;
   padding: 8px 15px;
   font-size: inherit;
+  transition: $standardTrans;
+
+  &:hover {
+    background: $primaryColor;
+    color: $secondaryColor;
+    transition: $standardTrans;
+  }
 }

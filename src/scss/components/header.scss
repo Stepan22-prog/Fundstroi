@@ -1,12 +1,22 @@
 .header__top {
   display: flex;
-  padding: 10px 0;
+  padding: 10px ($mainOffset);
+  max-width: ($containerWidth + $mainOffset * 2);
+  margin: 0 auto;
+
+  @media (min-width: $mobileB) {
+      padding: 10px $mainOffsetMobileB;
+  }
 }
 
 .header-logo {
   flex: auto;
   font-weight: 700;
   font-size: 28px;
+
+  a:hover {
+    text-decoration: none;
+  }
 }
 
 .header-contacts {
@@ -22,4 +32,17 @@ a.header-contacts__item {
 .header-callback-button {
   font-weight: 500;
   margin-left: 20px;
+}
+
+.header__bottom {
+  border-top: 1px solid $primaryColor;
+}
+
+.header-menu {
+  list-style: none;
+  display: flex;
+  gap: 25px;
+  max-width: ($containerWidth + $mainOffset * 2);
+  margin: 0 auto;
+  padding: 10px ($mainOffset);
 }
