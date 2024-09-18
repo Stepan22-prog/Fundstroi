@@ -1,0 +1,20 @@
+.callback {
+  padding: 30px 0;
+  background: $primaryColor;
+  color: $secondaryColor;
+
+  &__subtitle {
+    text-align: center;
+    margin-top: 10px;
+    margin-bottom: 25px;
+  }
+
+  &__body {
+    background: $secondaryColor;
+    max-width: 500px;
+    padding: 20px;
+    border-radius: 10px;
+    color: $primaryColor;
+    margin: 0 auto;
+  }
+}
