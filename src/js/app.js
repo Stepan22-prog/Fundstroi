@@ -137,7 +137,7 @@ function createElement({ tagName, className }) {
 function createProductCard(productData) {
   const cardHTML = `
     <div class="product-card">
-      <div class="product-card__img"><img src="${productData.img}" alt="${productData.title}"></div>
+      <div data-type="callback" class="product-card__img"><img src="${productData.img}" alt="${productData.title}"></div>
       <h4 class="product-card__title">${productData.title}</h4>
       <button data-type="callback" type="button" class="product-card__button button">Дізнатись ціну</button>
     </div>
