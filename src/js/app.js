@@ -165,3 +165,17 @@ products.forEach(productGroup => {
 
 //tabs
 modules.tabs();
+
+//gallery
+import lightGallery from 'lightgallery';
+
+// Plugins
+import lgThumbnail from 'lightgallery/plugins/thumbnail'
+import lgZoom from 'lightgallery/plugins/zoom'
+
+lightGallery(document.getElementById('gallery-body'), {
+  plugins: [lgZoom, lgThumbnail],
+  speed: 500,
+  thumbnail: true,
+  showZoomInOutIcons: true,
+});

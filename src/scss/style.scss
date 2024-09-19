@@ -14,6 +14,7 @@
 * Swiper styles
 */
 @import 'libs/swiper';
+@import 'libs/lightgallery-bundle.min';
 
 /**
 * Common blocks
@@ -32,3 +33,4 @@
 @import 'components/delivery';
 @import 'components/callback';
 @import 'components/about-us';
+@import 'components/gallery';
