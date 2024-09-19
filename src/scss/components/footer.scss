@@ -1,0 +1,59 @@
+.footer {
+  background: $primaryColor;
+  color: $secondaryColor;
+  padding: 30px;
+
+  &__body {
+    display: flex;
+    margin-bottom: 20px;
+  }
+
+  &__column {
+    flex: 0 0 23%;
+    &.column_wide {
+      flex: auto;
+    }
+  }
+
+  &__title {
+    font-size: 32px;
+    font-weight: 500;
+    margin-bottom: 10px;
+  }
+
+  &__section-title {
+    font-size: 24px;
+    font-weight: 500;
+    margin-bottom: 15px;
+  }
+
+  &__copyright {
+    text-align: center;
+  }
+}
+
+.list {
+  padding-left: 20px;
+
+  &__item:not(:last-child) {
+    margin-bottom: 5px;
+  }
+}
+
+.telephones {
+  display: flex;
+  align-items: baseline;
+
+  &__icon {
+    flex: 0 0 25px;
+    margin-right: 10px;
+  }
+
+  &__list {
+    list-style: none;
+  }
+
+  &__item {
+    margin-bottom: 5px;
+  }
+}
