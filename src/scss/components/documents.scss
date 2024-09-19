@@ -1,0 +1,21 @@
+.documents {
+  &__body {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    margin-top: 20px;
+  }
+
+  &__item {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    list-style: none;
+    font-size: 18px;
+    padding-bottom: 15px;
+
+    img {
+      flex: 0 0 30px;
+      width: 30px;
+    }
+  }
+}
