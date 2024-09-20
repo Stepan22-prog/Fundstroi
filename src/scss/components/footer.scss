@@ -16,9 +16,20 @@
   }
 
   &__title {
+    display: flex;
+    align-items: center;
     font-size: 32px;
     font-weight: 500;
     margin-bottom: 10px;
+
+    img {
+      display: inline-block;
+      margin-right: 8px;
+      width: 54px;
+      background: #fff;
+      border-radius: 5px;
+      padding: 2px;
+    }
   }
 
   &__section-title {
