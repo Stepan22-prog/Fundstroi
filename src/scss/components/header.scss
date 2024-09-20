@@ -20,9 +20,16 @@
 }
 
 .header-logo {
+  display: flex;
+  align-items: center;
   flex: auto;
   font-weight: 700;
   font-size: 28px;
+
+  img {
+    width: 50px;
+    margin-right: 5px;
+  }
 
   a:hover {
     text-decoration: none;
