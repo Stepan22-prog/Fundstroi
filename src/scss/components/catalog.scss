@@ -1,15 +1,10 @@
-.catalog {
-  padding-top: 130px;
-  margin: -100px 0 20px 0;
-}
-
 .tabs-nav {
   display: flex;
   justify-content: space-between;
   gap: 15px;
   background: $addBackground;
   padding: 8px;
-  width: 40%;
+  width: 500px;
   margin: 15px auto;
   border-radius: 5px;
 
@@ -25,14 +20,29 @@
       transition: $standardTrans;
     }
   }
+
+  @media (max-width: $mobileB) {
+    flex-wrap: wrap;
+    max-width: 350px;
+  }
+
+  @media (max-width: $mobileS) {
+    flex-wrap: wrap;
+    max-width: 300px;
+  }
 }
 
 .tabs-body__item {
   display: grid;
-  grid-template-columns: repeat(4, 1fr);
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  justify-content: center;
   gap: 20px;
   &[hidden] {
     display: none;
+  }
+
+  @media (max-width: $mobileB) {
+    justify-items: center;
   }
 }
 
@@ -57,18 +67,38 @@
       transform: scale(1.1);
       cursor: pointer;
     }
+
+    @media (max-width: $laptop) {
+      max-height: 155px;
+    }
   }
 
   &__title {
     font-size: 20px;
     margin: 10px 0;
     text-align: center;
+
+    @media (max-width: $mobileS) {
+      font-size: 18px;
+    }
   }
 
   &__button {
     font-weight: 500;
     border-radius: 5px;
     font-size: 18px;
-    padding: 10 20px;
+    padding: 10px 20px;
+
+    @media (max-width: $mobileS) {
+      padding: 8px 15px;
+    }
+  }
+
+  @media (max-width: $mobileB) {
+    width: 350px;
+  }
+  @media (max-width: $mobileS) {
+    width: 300px;
+    padding: 10px;
   }
 }
