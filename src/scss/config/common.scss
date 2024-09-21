@@ -39,6 +39,12 @@ textarea {
 
 main {
   margin-top: 103px;
+  @media (max-width: $tablet) {
+    margin-top: 65px;
+  }
+  @media (max-width: $mobileB) {
+    margin-top: 56px;
+  }
 }
 
 .section-title {
