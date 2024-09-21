@@ -1,12 +1,65 @@
 .about-us {
   padding-top: 130px;
   margin: -110px 0 20px 0;
+  position: relative;
+
+  &__container {
+    display: flex;
+    align-items: center;
+    gap: 35px;
+  }
+
+  &__column {
+    flex: 0 0 40%;
+    &.column_wide {
+      flex:auto;
+    }
+  }
+
+  &__img {
+    border-radius: 20px;
+  }
+
+  &__title {
+    font-size: 32px;
+    text-align: left;
+    margin-bottom: 25px;
+  }
 
   &__text {
-    max-width: 600px;
-    text-align: center;   
-    margin: 20px auto 15px auto;
-    font-size: 18px;
-    line-height: 24px;
+    max-width: 800px;
+    margin-bottom: 20px;
+    font-size: 20px;
+    line-height: 1.4;
+    text-align: justify;
+
+    &.text_accent {
+      font-size: 25px;
+    }
+
+    &.small_margin {
+      margin-bottom: 10px;
+    }
+
+    &.type_list {
+      padding-left: 20px;
+    }
+  }
+
+  &__decoration {
+    width: 350px;
+    height: 350px;
+    position: absolute;
+    z-index: -1;
+
+    &.type_circle {
+      top: 130px;
+      right: 45%;
+    }
+
+    &.type_rectangle {
+      bottom: 0;
+      right: 0;
+    }
   }
 }
