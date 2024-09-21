@@ -14,8 +14,10 @@
   max-width: ($containerWidth + $mainOffset * 2);
   margin: 0 auto;
 
-  @media (min-width: $mobileB) {
-      padding: 10px $mainOffsetMobileB;
+  @media (max-width: $tablet) {
+    align-items: center;
+    gap: 5px;
+    padding: 10px $mainOffsetMobileB;
   }
 }
 
@@ -34,25 +36,78 @@
   a:hover {
     text-decoration: none;
   }
+
+  @media (max-width: $mobileB) {
+    font-size: 18px;
+    img {
+      width: 40px;
+      margin-right: 5px;
+    }
+  }
 }
 
-.header-contacts {
+.header-contacts__button {
+  display: none;
+
+  @media (max-width: $tablet) {
+    display: block;
+    height: auto;
+    margin-right: 15px;
+  }
+}
+
+.header-contacts__body {
   display: grid;
   grid-template-columns: 1fr 1fr;
   gap: 2px;
+
+  @media (max-width: $tablet) {
+    display: block;
+    position: absolute;
+    height: auto;
+    overflow-y: hidden;
+    right: 0;
+    background: $secondaryColor;
+    padding: 5px;
+    &[hidden] {
+      height: 0;
+      padding: 0;
+    }
+  }
 }
 
 a.header-contacts__item {
+  display: block;
   font-weight: 500;
+
+  @media (max-width: $tablet) {
+    margin-bottom: 10px;
+  }
 }
 
 .header-callback-button {
   font-weight: 500;
   margin-left: 20px;
+  
+  @media (max-width: $tablet) {
+    display: none;
+  }
+
+  &.type_mobile {
+    display: none;
+    margin: 15px auto;
+    @media (max-width: $tablet) {
+      display: block;
+    }
+  }
 }
 
 .header__bottom {
   border-top: 1px solid $primaryColor;
+  @media (max-width: $tablet) {
+    height: 0;
+    overflow-y: hidden;
+  }
 }
 
 .header-menu {
@@ -63,4 +118,80 @@ a.header-contacts__item {
   max-width: ($containerWidth + $mainOffset * 2);
   margin: 0 auto;
   padding: 10px ($mainOffset);
+
+  @media (max-width: $tablet) {
+    flex-direction: column;
+    align-items: center;
+    padding: 0;
+  }
+}
+
+html.menu-open .header__bottom {
+  transition: $standardTrans;
+  height: calc(100vh - (55px));
+  @media (max-width: $tablet) {
+    padding-top: 15px;
+  }
+}
+
+.header-menu-icon {
+  display: none;
+  width: 30px;
+  height: 15px;
+  position: relative;
+  background: transparent;
+
+  span,
+  &::before,
+  &::after {
+    position: absolute;
+    left: 0;
+    width: 30px;
+    height: 2px;
+    background: $primaryColor;
+    display: inline-block;
+    border-radius: 5px;
+
+  }
+
+  span {
+    top: 50%;
+    transform: translate(0, -50%);
+  }
+
+  &::before,
+  &::after {
+    content: "";
+  }
+
+  &::after {
+    bottom: 0;
+    transition: $standardTrans;
+  }
+
+  &::before {
+    top: 0;
+    height: 2.5px;
+    transition: $standardTrans;
+  }
+
+  @media (max-width: $tablet) {
+    display: block;
+  }
+}
+
+html.menu-open .header-menu-icon {
+  span {
+    display: none;
+  }
+
+  &::after {
+    transform: rotate(45deg) translateX(-9px);
+    transition: $standardTrans;
+  }
+
+  &::before {
+    transform: rotate(-45deg) translateX(-9px);
+    transition: $standardTrans;
+  }
 }
