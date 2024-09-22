@@ -1,17 +1,27 @@
 .projects {
-  padding-top: 130px;
-  margin: -110px 0 20px 0;
-
   &__body {
     display: grid;
     grid-template-columns: 1fr 1fr;
     gap: 20px;
     margin-top: 20px;
+
+    @media (max-width: $tablet) {
+      grid-template-columns: 1fr;
+    }
+
+    @media (max-width: $mobileS) {
+      margin-top: 15px;
+      gap: 15px;
+    }
   }
 
   &__thumb {
     height: 350px;
     object-fit: cover;
+
+    @media (max-width: $mobileB) {
+      height: 300px;
+    }
   }
 
   &__title {
@@ -19,5 +29,9 @@
     margin-top: 10px;
     font-size: 18px;
     font-weight: 500;
+
+    @media (max-width: $mobileB) {
+      font-size: 16px;
+    }
   }
 }
