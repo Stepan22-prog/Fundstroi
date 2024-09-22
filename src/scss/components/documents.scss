@@ -1,11 +1,16 @@
 .documents {
-  padding-top: 130px;
-  margin: -110px 0 25px 0;
-
   &__body {
     display: grid;
     grid-template-columns: 1fr 1fr;
     margin-top: 20px;
+
+    @media (max-width: $tablet) {
+      grid-template-columns: 1fr;
+    }
+
+    @media (max-width: $mobileS) {
+      margin-top: 15px;;
+    }
   }
 
   &__item {
@@ -19,6 +24,16 @@
     img {
       flex: 0 0 40px;
       width: 40px;
+    }
+
+    @media (max-width: $mobileS) {
+      font-size: 18px;
+      padding-bottom: 10px;
+
+      img {
+        flex: 0 0 30px;
+        width: 30px;
+      }
     }
   }
 }
