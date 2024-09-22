@@ -3,10 +3,19 @@
   background: $primaryColor;
   color: $secondaryColor;
 
+  @media (max-width: $mobileS) {
+    padding: 15px;
+  }
+
   &__subtitle {
     text-align: center;
     margin-top: 10px;
     margin-bottom: 25px;
+
+    @media (max-width: $mobileS) {
+      margin-top: 8px;
+      margin-bottom: 15px;
+    }
   }
 
   &__body {
@@ -16,5 +25,9 @@
     border-radius: 10px;
     color: $primaryColor;
     margin: 0 auto;
+
+    @media (max-width: $mobileB) {
+      padding: 15px;
+    }
   }
 }

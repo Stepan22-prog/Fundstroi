@@ -113,6 +113,10 @@ main {
 .input {
   margin-bottom: 15px;
 
+  @media (max-width: $mobileS) {
+    margin-bottom: 10px;
+  }
+
   &__label {
     display: block;
     font-weight: 500;
