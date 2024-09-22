@@ -3,15 +3,39 @@
   color: $secondaryColor;
   padding: 30px;
 
+  @media (max-width: $mobileB) {
+    padding: 15px;
+  }
+
   &__body {
     display: flex;
     margin-bottom: 20px;
+    @media (max-width: $tablet) {
+      flex-wrap: wrap;
+      justify-content: center;
+    }
+
+    @media (max-width: $mobileS) {
+      flex-direction: column;
+      margin-bottom: 0;
+    }
   }
 
   &__column {
     flex: 0 0 23%;
     &.column_wide {
       flex: auto;
+    }
+
+    @media (max-width: $tablet) {
+      flex: 50%;
+      &:not(:last-child) {
+        margin-bottom: 15px;
+      }
+
+      &.column_wide {
+        flex: 100%;
+      }
     }
   }
 
@@ -30,12 +54,25 @@
       border-radius: 5px;
       padding: 2px;
     }
+
+    @media (max-width: $mobileB) {
+      font-size: 26px;
+
+      img {
+        width: 45px;
+      }
+    }
   }
 
   &__section-title {
     font-size: 24px;
     font-weight: 500;
     margin-bottom: 15px;
+
+    @media (max-width: $mobileS) {
+      font-size: 20px;
+      margin-bottom: 10px;
+    }
   }
 
   &__copyright {
