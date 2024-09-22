@@ -148,7 +148,6 @@ function createProductCard(productData) {
 const productGroupElement = createElement({ tagName: 'div', className: 'tabs-body__item'});
 const allProducts = []
 products.forEach(productGroup => allProducts.push(...productGroup.map(product => createProductCard(product))));
-console.log(allProducts);
 
 productGroupElement.innerHTML = allProducts.join('');
 

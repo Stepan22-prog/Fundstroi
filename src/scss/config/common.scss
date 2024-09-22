@@ -79,14 +79,36 @@ main {
   }
 
   &__close {
-    width: 40px;
-    height: 40px;
+    background: transparent;
+    padding: 0;
     position: absolute;
     right: -35px;
     top: -35px;
+
+    svg {
+      width: 40px;
+      height: 40px;
+      fill: $secondaryColor;
+
+      @media (max-width: $mobileB) {
+        fill: $primaryColor;
+        width: 35px;
+        height: 35px;
+      }
+    }
     
     &:hover {
       cursor: pointer;
+    }
+
+    @media (max-width: $mobileB) {
+      right: 10px;
+      top: 15px;
+    }
+
+    @media (max-width: $mobileS) {
+      right: 8px;
+      top: 12px;
     }
   }
 
@@ -95,6 +117,13 @@ main {
     background: $secondaryColor;
     padding: 20px;
     border-radius: 10px;
+    margin: 20px;
+
+    @media (max-width: $mobileS) {
+      height: 100%;
+      margin: 0;
+      border-radius: 0;
+    }
   }
 
   &__title {
@@ -102,11 +131,24 @@ main {
     font-size: 24px;
     text-align: center;
     margin-bottom: 10px;
+
+    @media (max-width: $mobileB) {
+      text-align: left;
+    }
+
+    @media (max-width: $mobileS) {
+      font-size: 22px;
+    }
   }
 
   &__subtitle {
     text-align: center;
     margin-bottom: 15px;
+
+    @media (max-width: $mobileS) {
+      font-size: 14px;
+      margin-bottom: 10px;
+    }
   }
 }
 
