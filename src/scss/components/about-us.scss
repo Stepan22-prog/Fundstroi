@@ -1,29 +1,58 @@
 .about-us {
-  padding-top: 130px;
-  margin: -110px 0 20px 0;
   position: relative;
 
   &__container {
     display: flex;
     align-items: center;
     gap: 35px;
+
+    @media (max-width: $tablet) {
+      flex-direction: column;
+    }
   }
 
   &__column {
     flex: 0 0 40%;
     &.column_wide {
       flex:auto;
+
+      @media (max-width: $tablet) {
+        margin-top: 375px;
+      }
+
+      @media (max-width: $mobileS) {
+        margin-top: 325px;
+      }
     }
   }
 
   &__img {
     border-radius: 20px;
+
+    @media (max-width: $tablet) {
+      position: absolute;
+      top: 65px;
+      left: 0;
+      width: 100%;
+      max-height: 400px;
+      object-fit: cover;
+      border-radius: 0;
+    }
+
+    @media (max-width: $mobileS) {
+      max-height: 350px;
+    }
   }
 
   &__title {
     font-size: 32px;
     text-align: left;
     margin-bottom: 25px;
+
+    @media (max-width: $tablet) {
+      font-size: 28px;
+      margin-bottom: 15px;
+    }
   }
 
   &__text {
@@ -33,8 +62,29 @@
     line-height: 1.4;
     text-align: justify;
 
+    @media (max-width: $tablet) {
+      font-size: 18px;
+      margin-bottom: 15px;
+    }
+
+    @media (max-width: $mobileB) {
+      line-height: 1.2;
+    }
+
+    @media (max-width: $mobileS) {
+      font-size: 16px;
+    }
+
     &.text_accent {
       font-size: 25px;
+
+      @media (max-width: $tablet) {
+        font-size: 20px;
+      }
+
+      @media (max-width: $mobileS) {
+        font-size: 18px;
+      }
     }
 
     &.small_margin {
@@ -52,9 +102,29 @@
     position: absolute;
     z-index: -1;
 
+    @media (max-width: $tablet) {
+      width: 250px;
+      height: 250px;
+    }
+
+    @media (max-width: $mobileS) {
+      width: 200px;
+      height: 200px;
+    }
+
     &.type_circle {
       top: 130px;
       right: 45%;
+
+      @media (max-width: $tablet) {
+        top: 400px;
+        left: -15px;
+      }
+
+      @media (max-width: $mobileS) {
+        top: 350px;
+        left: -35px;
+      }
     }
 
     &.type_rectangle {
