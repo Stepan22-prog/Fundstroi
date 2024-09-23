@@ -118,6 +118,7 @@ main {
     padding: 20px;
     border-radius: 10px;
     margin: 20px;
+    max-width: 476px;
 
     @media (max-width: $mobileS) {
       height: 100%;
@@ -148,6 +149,26 @@ main {
     @media (max-width: $mobileS) {
       font-size: 14px;
       margin-bottom: 10px;
+    }
+  }
+
+  &__message {
+    display: none;
+    padding: 8px;
+    border-radius: 5px;
+    color: $secondaryColor;
+    margin-bottom: 10px;
+
+    &.type_success {
+      background: green;
+    }
+
+    &.type_error {
+      background: darkred;
+    }
+
+    &.show_true {
+      display: block;
     }
   }
 }

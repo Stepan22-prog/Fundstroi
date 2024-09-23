@@ -1,22 +1,24 @@
 <section data-close-overlay data-popup="callback" class="callback-popup popup">
-    <div class="popup__content">
+    <form id="popup-form" class="popup__content">
         <button class="popup__close button-close" aria-label="Close btn">
             <svg xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 -960 960 960" width="24px" fill="#F2F2F2"><path d="m256-200-56-56 224-224-224-224 56-56 224 224 224-224 56 56-224 224 224 224-56 56-224-224-224 224Z"/></svg>
         </button>
         <h3 class="popup__title">Перетелефонувати мені</h3>
         <h4 class="popup__subtitle">Наш менеджер зв'яжеться з вами і надасть консультацію</h4>
+        <p id="popup-success" class="popup__message type_success">Повідомлення надіслано. Менеджер скоро зв'яжеться з вами</p>
+        <p id="popup-error" class="popup__message type_error">Виникла помилка. Спробуйте ще раз</p>
         <div class="input">
-            <label for="name" class="input__label">Ваше ім’я</label>
-            <input id="name" type="text" class="input__field" required />
+            <label for="popup-name" class="input__label">Ваше ім’я</label>
+            <input id="popup-name" name="name" type="text" class="input__field" required minlength="2" />
         </div>
         <div class="input">
-            <label for="telephone" class="input__label">Телефон</label>
-            <input id="telephone" type="text" class="input__field" required />
+            <label for="popup-telephone" class="input__label">Телефон</label>
+            <input id="popup-telephone" name="telephone" type="text" class="input__field" required placeholder="+38 (___) ___-____" />
         </div>
         <div class="input">
-            <label for="comment" class="input__label">Коментар</label>
-            <textarea id="comment" class="input__field type_textarea"></textarea>
+            <label for="popup-comment" class="input__label">Коментар</label>
+            <textarea id="popup-comment" name="comment" class="input__field type_textarea"></textarea>
         </div>
-        <button class="button width_full">Надіслати</button>
-    </div>
+        <button type="submit" class="button width_full">Надіслати</button>
+    </form>
 </section>

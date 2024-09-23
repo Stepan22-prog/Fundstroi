@@ -127,21 +127,23 @@
         <div class="callback__container">
           <h3 class="callback__title section-title">Залиште за’явку</h3>
           <h4 class="callback__subtitle">Наш менеджер зв'яжеться з вами і надасть консультацію</h4>
-          <div class="callback__body">
+          <form id="callback" class="callback__body">
+            <p id="callback-success" class="popup__message type_success">Повідомлення надіслано. Менеджер скоро зв'яжеться з вами</p>
+            <p id="callback-error" class="popup__message type_error">Виникла помилка. Спробуйте ще раз</p>
             <div class="input">
               <label for="name" class="input__label">Ваше ім’я</label>
-              <input id="name" type="text" class="input__field" required />
+              <input id="name" name="name" type="text" class="input__field" required maxlength="2" />
             </div>
             <div class="input">
               <label for="telephone" class="input__label">Телефон</label>
-              <input id="telephone" type="text" class="input__field" required />
+              <input id="telephone" name="telephone" type="text" class="input__field" required placeholder="+38 (___) ___-____" />
             </div>
             <div class="input">
               <label for="comment" class="input__label">Коментар</label>
-              <textarea id="comment" class="input__field type_textarea" ></textarea>
+              <textarea id="comment" name="comment" class="input__field type_textarea" ></textarea>
             </div>
-            <button class="button width_full">Надіслати за'явку</button>
-          </div>
+            <button type="submit" class="button width_full">Надіслати за'явку</button>
+          </form>
         </div>
       </section>
       <section id="about-us" class="about-us spacing">

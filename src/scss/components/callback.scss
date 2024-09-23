@@ -1,7 +1,9 @@
 .callback {
+  position: relative;
   padding: 30px 0;
   background: $primaryColor;
   color: $secondaryColor;
+  z-index: 1;
 
   @media (max-width: $mobileS) {
     padding: 15px;
