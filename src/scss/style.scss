@@ -1,5 +1,3 @@
-@use 'sass:math';
-
 /**
 * Mounting fonts locally from a folder "./src/fonts"
 */
@@ -11,9 +9,8 @@
 @import 'config/reset';
 
 /**
-* Swiper styles
+* libs
 */
-@import 'libs/swiper';
 @import 'libs/lightgallery-bundle.min';
 
 /**
