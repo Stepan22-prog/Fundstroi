@@ -413,10 +413,12 @@ export function tabs() {
 }
 
 export function menuInit() {
+    let menuOpen = false;
     if (document.querySelector(".js-icon-menu")) {
         document.addEventListener("click", function (e) {
-            if ((bodyLockStatus && e.target.closest('.js-icon-menu')) || (bodyLockStatus && e.target.closest('.header-menu__item'))) {
+            if ((bodyLockStatus && e.target.closest('.js-icon-menu')) || (bodyLockStatus && menuOpen && e.target.closest('.header-menu__item'))) {
                 bodyLockToggle();
+                menuOpen = !menuOpen;
                 document.documentElement.classList.toggle("menu-open");
             }
         });
