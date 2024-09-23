@@ -34,14 +34,23 @@
 
 .tabs-body__item {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  grid-template-columns: repeat(4, 1fr);
   justify-content: center;
   gap: 20px;
   &[hidden] {
     display: none;
   }
 
+  @media (max-width: $laptop) {
+    grid-template-columns: repeat(3, 1fr);
+  }
+
+  @media (max-width: $tablet) {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
   @media (max-width: $mobileB) {
+    grid-template-columns: repeat(1, 1fr);
     justify-items: center;
   }
 }
@@ -77,6 +86,7 @@
     font-size: 20px;
     margin: 10px 0;
     text-align: center;
+    flex: auto;
 
     @media (max-width: $mobileS) {
       font-size: 18px;

@@ -27,13 +27,19 @@ textarea {
   transition: $standardTrans;
   border-radius: 5px;
 
-  &:hover {
-    background: $primaryColor;
-    color: $secondaryColor;
-    transition: $standardTrans;
+  @media (any-hover: hover) {
+    &:hover {
+      background: $primaryColor;
+      color: $secondaryColor;
+      transition: $standardTrans;
+    }
   }
   &.width_full {
     width: 100%;
+  }
+
+  &:active {
+    transform: scale(0.9);
   }
 }
 

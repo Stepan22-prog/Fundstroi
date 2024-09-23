@@ -232,7 +232,7 @@ const callbackMessageSuccess = document.querySelector('#callback-success');
 const callbackMessageError = document.querySelector('#callback-error');
 
 callbackForm.addEventListener('submit', async (e) => {
-  const result = handleFormSubmit(e);
+  const result = await handleFormSubmit(e);
   if (result.ok) {
     showMessage(callbackMessageSuccess);
     e.target.reset();
